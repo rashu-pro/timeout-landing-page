@@ -258,4 +258,7 @@ fabric.properties
 assets/img
 assets/vendor
 
+# ignore zip file
+*.zip
+
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm,node
