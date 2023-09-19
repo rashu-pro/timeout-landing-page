@@ -16,30 +16,55 @@
   color: #fff;
 }
 
+.btn {
+  min-width: 120px;
+  padding: 10px 15px;
+}
+
 .bg-red {
   background-color: #d52b1e !important;
 }
 
 #header .logo img {
-  max-height: 86px;
+  max-height: 50px;
+}
+
+@media (min-width:991px) {
+  #header .logo img {
+    max-height: 86px;
+  }
 }
 
 #header {
   box-shadow: none;
+  height: auto;
 }
 
 #header.fixed-top {
   background-color: #d52b1e;
+  height: auto;
 }
 
 #header.fixed-top .logo img {
-  max-height: 70px;
+  max-height: 50px;
 }
 
-#header.fixed-top .navbar a,
-#header.fixed-top .navbar a:focus {
-  color: #fff;
+@media (min-width:991px) {
+
+  #header.fixed-top .navbar a,
+  #header.fixed-top .navbar a:focus {
+    color: #fff;
+  }
+
+  #header.fixed-top .logo img {
+    max-height: 70px;
+  }
 }
+
+#topbar .social-links a{
+  color:#fff;
+}
+
 
 #header.fixed-top .navbar a:hover,
 #header.fixed-top .navbar .active,
@@ -178,15 +203,331 @@ body {
   background: #fac835;
   color: #000 !important;
 }
+
 .back-to-top {
   background: #d52b1e;
 }
-.back-to-top:hover{
+
+.back-to-top:hover {
   background-color: #bb2d3b;
 }
+
 .navbar>ul>li>a:before {
   background-color: #d52b1e;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover>a {
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
   color: #d52b1e;
+}
+
+/* Bootstrap datepicker custom style */
+/* Style the datepicker container */
+
+/* Style the datepicker input field */
+.datepicker input.form-control {
+  height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Style the datepicker dropdown button */
+.datepicker .input-group-append .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Style the datepicker calendar */
+.datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style the datepicker table header */
+.datepicker table thead th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Style the datepicker table cells */
+.datepicker table tbody td {
+  text-align: center;
+  padding: 8px;
+}
+
+/* Style the selected date cell */
+.datepicker table tbody td.day.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the today's date cell */
+.datepicker table tbody td.today {
+  background-color: #f5f5f5;
+}
+
+/* Style the previous and next arrows */
+.datepicker table tbody .prev,
+.datepicker table tbody .next {
+  font-weight: bold;
+}
+
+/* Style the datepicker navigation icons */
+.datepicker table tbody .datepicker-switch {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style the datepicker footer */
+.datepicker table tfoot .today,
+.datepicker table tfoot .clear {
+  font-weight: bold;
+}
+
+/* Style the datepicker today button */
+.datepicker table tfoot .today {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-top: 5px;
+}
+
+/* Style the datepicker clear button */
+.datepicker table tfoot .clear {
+  color: #fff;
+  background-color: #d9534f;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-left: 10px;
+}
+
+
+
+/* New style */
+.datepicker.dropdown-menu {
+  padding: 0;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0;
+  -webkit-animation: popup 0.2s ease-out forwards;
+  animation: popup 0.2s ease-out forwards;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.datepicker.dropdown-menu table {
+  background-color: #242524;
+}
+
+.datepicker.dropdown-menu table thead {
+  background-color: #242524;
+}
+
+.datepicker.dropdown-menu table thead tr {
+  border-top: 0;
+}
+
+.datepicker.dropdown-menu table tbody {
+  background-color: white;
+}
+
+.datepicker.dropdown-menu table tr {
+  border-top: 1px solid #ededed;
+}
+
+.datepicker.dropdown-menu table tr td,
+.datepicker.dropdown-menu table tr th {
+  width: auto;
+  height: 24px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 0;
+  transition: background-color 0.6s ease-out;
+}
+
+
+
+@media screen and (min-width: 400px) {
+
+  .datepicker.dropdown-menu table tr td,
+  .datepicker.dropdown-menu table tr th {
+    padding: 10px 12px;
+  }
+}
+
+.datepicker.dropdown-menu table tr td:hover,
+.datepicker.dropdown-menu table tr td.active:hover,
+.datepicker.dropdown-menu table tr td:active:hover,
+.datepicker.dropdown-menu table tr th:hover,
+.datepicker.dropdown-menu table tr th.active:hover,
+.datepicker.dropdown-menu table tr th:active:hover {
+  border-color: #ededed;
+  border-radius: 0;
+  transition: background-color 0.2s ease-out;
+}
+
+.datepicker.dropdown-menu table tr td.focused,
+.datepicker.dropdown-menu table tr td.selected,
+.datepicker.dropdown-menu table tr th.focused,
+.datepicker.dropdown-menu table tr th.selected {
+  background-color: #24a0ad;
+  border-color: #ededed;
+  border-radius: 0;
+}
+
+.datepicker.dropdown-menu table tr td.active,
+.datepicker.dropdown-menu table tr td.active:focus,
+.datepicker.dropdown-menu table tr td.active.active:hover,
+.datepicker.dropdown-menu table tr td:active:focus,
+.datepicker.dropdown-menu table tr td.highlighted,
+.datepicker.dropdown-menu table tr th.active,
+.datepicker.dropdown-menu table tr th.active:focus,
+.datepicker.dropdown-menu table tr th.active.active:hover,
+.datepicker.dropdown-menu table tr th:active:focus,
+.datepicker.dropdown-menu table tr th.highlighted {
+  background-color: #1b7983;
+  border-color: #ededed;
+}
+
+.datepicker.dropdown-menu table tr th.datepicker-switch {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background-color: inherit;
+  border-radius: 0;
+}
+
+.datepicker.dropdown-menu table tr th.prev,
+.datepicker.dropdown-menu table tr th.next {
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 0;
+}
+
+.datepicker.dropdown-menu table tr th.dow {
+  padding: 2px 12px;
+  font-size: 12px;
+  line-height: 2;
+  color: #ffffff;
+  background-color: #313131;
+  border-top: 1px solid #242524;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+.datepicker.dropdown-menu table tr td.day {
+  width: 24px;
+  border-left: 1px solid #ededed;
+}
+
+.datepicker.dropdown-menu table tr td.day:last-child {
+  border-right: 1px solid #ededed;
+}
+
+.datepicker.dropdown-menu table tr td.range {
+  background-color: #eeeeee;
+}
+
+.datepicker.dropdown-menu .new {
+  color: #000;
+  opacity: 0.7;
+}
+
+.datepicker.dropdown-menu .old .datepicker.dropdown-menu .disabled,
+.datepicker.dropdown-menu .disabled:hover {
+  color: #ccc;
+}
+
+[class*=fontawesome-]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+.fontawesome-calendar {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  font-size: 24px;
+  z-index: -99;
+}
+
+/*@-webkit-keyframes popup {
+  from {
+      opacity: 0;
+      transform: translateY(12px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes popup {
+  from {
+      opacity: 0;
+      transform: translateY(12px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}*/
+
+
+.clock-wrapper {
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.timer-wrapper {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  /* text-align: center; */
+  line-height: 1;
+}
+
+.timer-holder {
+  padding: 5px 5px;
+  min-width: 55px;
+  display: inline-block;
+}
+
+.timer-name {
+  font-size: 1rem;
+  padding-top: 4px;
+  font-weight: 600;
+}
+
+/** Always place the footer at the bottom */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+/** ./end */
+
+.fixed-top .mobile-nav-toggle {
+  color: #fff;
 }
